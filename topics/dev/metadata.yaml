@@ -264,7 +264,33 @@ material:
       - jmchilton
       - bgruening
       - hmenager
-
+  -
+    title: "Conda"
+    type: "tutorial"
+    name: "conda-only"
+    hands_on: "external"
+    hands_on_url: "http://planemo.readthedocs.io/en/latest/writing_standalone.html"
+    slides: yes
+    questions:
+      - "What are Conda and Bioconda?"
+      - "What are Conda recipes and environments?"
+      - "How do I find and use existing Conda recipes?"
+      - "How do I develop Conda recipes for use within Galaxy tools?"
+    objectives:
+      - "Learn the basics of building Conda recipes and contributing to Bioconda."
+    time_estimation: "1.25h"
+    requirements:
+      -
+        title: "Tool development and integration into Galaxy"
+        type: "internal"
+        link: "/topics/dev/tutorials/tool-integration/slides.html"
+    key_points:
+      - "Bioconda has easy to follow contribution guidelines and is very welcoming to new contributors."
+    contributors:
+      - nsoranzo
+      - jmchilton
+      - bgruening
+      - hmenager
   -
     title: "Tool Dependencies and Containers"
     type: "tutorial"
