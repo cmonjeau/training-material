@@ -470,6 +470,14 @@ class: left
 
 ---
 
+### <i class="fa fa-pencil" aria-hidden="true"></i> Hands-on
+
+#### Solution
+
+https://github.com/genouest/conda-training/tree/master/recipes/fleeqtk
+
+---
+
 class: left
 
 ### <i class="fa fa-pencil" aria-hidden="true"></i> Hands-on
@@ -513,7 +521,7 @@ class: left
 
 #### Solution
 
-https://github.com/genouest/conda-training/tree/ef76eb5cc9768a573711655a14e28d8ef9ea76b0
+https://github.com/genouest/conda-training/tree/master/recipes/bedtools
 
 ---
 
@@ -590,6 +598,8 @@ source:
 
 > While supported by Conda, `git_url` and `git_rev` are not as stable as a git tarball. Ideally a github repo should have tagged releases that are accessible as tarballs from the “releases” section of the github repo. In addition tarballs can be easily mirrored and Bioconda is saving a copy of every tarball so the recipe can be rebuild at any time.
 
+.footnote[.center[https://bioconda.github.io/guidelines.html#stable-urls ]]
+
 ---
 
 class: left
@@ -605,6 +615,8 @@ conda skeleton pypi <package_name>
 - Builds likely correct `build.sh` and `meta.yaml`.
 - The test automatically added is probably sufficient for library, may need to write extra tests for command-line tools.
 - Recipes requiring `python` should build on Python 2.7, 3.5, and 3.6 by default, preprocessing selectors can be used with `build: skip` to skip targets.
+
+.footnote[.center[https://bioconda.github.io/guidelines.html#python ]]
 
 ---
 
@@ -688,19 +700,25 @@ class: left
 
 ### <i class="fa fa-pencil" aria-hidden="true"></i> Hands-on
 
-#### python bcbio-gff integration
+#### python ngsutils integration
 
  - Aim :
-  * build a recipe for bcbio-gff
+  * build a recipe for ngsutils
   * create a pull request on conda-training repository
 
- - bedtools download page : https://github.com/arq5x/bedtools2/releases/
-
- - bedtools can be built using make install (be careful to lib / include / etc.)
+ - Use skeleton
 
  - Use circleci to test your recipe
 
  - Create a pull request and keep a look on circleci tests
+
+---
+
+### <i class="fa fa-pencil" aria-hidden="true"></i> Hands-on
+
+#### Solution
+
+https://github.com/genouest/conda-training/tree/master/recipes/ngsutils
 
 ---
 
@@ -786,10 +804,10 @@ class: left
 
 ### <i class="fa fa-pencil" aria-hidden="true"></i> Hands-on
 
-#### TraMineR integration
+#### qcc integration
 
  - Aim :
-  * build a recipe for TraMineR library
+  * build a recipe for qcc library
   * create a pull request on conda-training repository
 
  - Use skeleton
@@ -797,6 +815,14 @@ class: left
  - Use circleci to test your recipe
 
  - Create a pull request and keep a look on circleci tests
+
+---
+
+### <i class="fa fa-pencil" aria-hidden="true"></i> Hands-on
+
+#### Solution
+
+https://github.com/genouest/conda-training/tree/master/recipes/r-qcc
 
 ---
 
@@ -866,6 +892,8 @@ conda skeleton cpan <packagename>
 - Builds likely correct `build.sh` and `meta.yaml`.
 - The recipe will have the `perl-` prefix.
 
+.footnote[.center[https://bioconda.github.io/guidelines.html#perl ]]
+
 ---
 
 class: reduce70
@@ -922,4 +950,4 @@ class: left
 
 > Other metapackages might tie together conda packages with a theme. For example, all UCSC utilities related to bigBed files, or a set of packages useful for variant calling.
 
-https://bioconda.github.io/guidelines.html#metapackages
+.footnote[.center[https://bioconda.github.io/guidelines.html#metapackages ]]
